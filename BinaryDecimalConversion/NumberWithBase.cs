@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using NUnit.Framework;
-
-namespace BaseConversion
+﻿namespace BaseConversion
 {
     public class NumberWithBase
     {

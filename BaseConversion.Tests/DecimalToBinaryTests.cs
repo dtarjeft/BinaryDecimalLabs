@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.Linq;
+using NUnit.Framework;
 
 namespace BaseConversion.Tests
 {
-    using NUnit.Framework;
     [TestFixture]
     public class DecimalToBinaryTests
     {
@@ -46,7 +41,6 @@ namespace BaseConversion.Tests
         {
             var output = new NumberWithBase(0, 2);
             output = argInts.Aggregate(output, (current, argInt) => current + new NumberWithBase(argInt, 2));
-            Console.Write(output.Value);
             output.ChangeBase(10);
             Assert.AreEqual(result, output.Value);
         }
